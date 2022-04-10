@@ -9,35 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image("pofile")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 160, height: 160, alignment: .center)
-            
-            HStack{
-                Image("gmail")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 26, height: 26, alignment: .center)
-                Text("amirhusseinSoori75@gmail.com").padding(EdgeInsets(top: 10, leading: 0, bottom: 3, trailing: 0))
-                    .font(Font.custom("domine_bold",size: 20))
-            }
-            
-            HStack{
-                Image("github")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 26, height: 26, alignment: .center)
-                Text("github.com/amirhusseinSSoori").padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
+        ZStack{
+            Image("tinder background").resizable().edgesIgnoringSafeArea(.all)
+            VStack{
+                Spacer().frame(height:270)
+                HStack{
+                    Image("relogo").resizable().frame(width:45,height:55)
+                    Image("nottinder").resizable().aspectRatio(contentMode: .fit).frame(width:190,height:60).offset(x:-5,y:8)
+                    
+                }
+                Spacer().frame(height:50)
+                Text("By Tapping create an account and sign in you agree to our terms.learn how we use your data in our pravicy policy and cookies policy").multilineTextAlignment(.center).foregroundColor(.white)
+                Image("create account button").resizable().aspectRatio(contentMode: .fit).frame(width:400,height:60)
+                Image("sign in box").resizable().aspectRatio(contentMode: .fit).frame(width:400,height:60)
+                Text("Trouble Signing ?").font(.system(size:20)).foregroundColor(.white)
                 
-                    .font(Font.custom("domine_bold",size: 15))
+                
             }
-            
-            
         }
+        
+        
     }
-    
     
     
 }
